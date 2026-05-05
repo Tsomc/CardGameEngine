@@ -1,8 +1,33 @@
 {
     "C_Cpp.default.compileCommands": "${workspaceFolder}/compile_commands.json",
     "C_Cpp.default.cppStandard": "c++17",
+    "C_Cpp.default.intelliSenseMode": "windows-gcc-x64",
+    "C_Cpp.default.compilerPath": "D:/MinGW/x86_64-15.2.0-release-posix-seh-ucrt-rt_v13-rev0/mingw64/bin/c++.exe",
     "C_Cpp.default.includePath": [
-        "${workspaceFolder}/libs/**",
-        "${workspaceFolder}/src/**"
-    ]
+        "${workspaceFolder}/engine/foundation",
+        "${workspaceFolder}/engine/core",
+        "${workspaceFolder}/engine/platform",
+        "${workspaceFolder}/engine/resource",
+        "${workspaceFolder}/engine/render",
+        "${workspaceFolder}/engine/input",
+        "${workspaceFolder}/engine/audio",
+        "${workspaceFolder}/engine/script",
+        "${workspaceFolder}/engine/animation",
+        "${workspaceFolder}/engine/card",
+        "${workspaceFolder}/engine/scene",
+        "${workspaceFolder}/engine/ui",
+        "${workspaceFolder}/engine/debug",
+        "${workspaceFolder}/libs/glm/glm-0.9.9.8",
+        "${workspaceFolder}/libs/nlohmann",
+        "${workspaceFolder}/libs/sol2/sol2-3.5.0/include",
+        "${workspaceFolder}/libs/imgui/imgui-1.91.0",
+        "${workspaceFolder}/libs/imgui/imgui-1.91.0/backends",
+        "${workspaceFolder}/libs/lua-5.4.7/src",
+        "${workspaceFolder}/libs/SDL2/SDL2-2.30.10/x86_64-w64-mingw32/include/SDL2",
+        "${workspaceFolder}/libs/SDL2_image/SDL2_image-2.8.4/x86_64-w64-mingw32/include/SDL2",
+        "${workspaceFolder}/libs/SDL2_ttf/SDL2_ttf-2.22.0/x86_64-w64-mingw32/include/SDL2",
+        "${workspaceFolder}/libs/SDL2_mixer/SDL2_mixer-2.8.0/x86_64-w64-mingw32/include/SDL2"
+    ],
+    "C_Cpp.default.forcedInclude": [],
+    "C_Cpp.errorSquiggles": "enabled"
 }

@@ -1,8 +1,12 @@
 # 第三方依赖（通过 setup.ps1 下载）
 libs/
 
-# CMake 构建输出
+# CMake 构建中间文件
 build/
+build_test/
+
+# 编译输出产物（exe, dll, lib）
+output/
 
 # 生成的 IntelliSense 文件
 compile_commands.json
@@ -11,3 +15,6 @@ compile_commands.json
 *.user
 *.suo
 .vs/
+
+# 辅助脚本（非源码）
+tools/expand_cmds.py

@@ -4,8 +4,3 @@ CompileFlags:
     - "-D_M_AMD64"
   Remove:
     - "-mwindows"
-
-Diagnostics:
-  Suppress:
-    - "builtin_redecl"
-    - "pp_including_mainfile_in_preamble"

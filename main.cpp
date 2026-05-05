@@ -1,72 +1,99 @@
 #include <cstdio>
 
 #include <SDL.h>
-#include <SDL_image.h>
-#include <SDL_ttf.h>
-#include <SDL_mixer.h>
 
-#include <glm/glm.hpp>
-#include <glm/gtc/matrix_transform.hpp>
+#include "engine.h"
+#include "engine_config.h"
+#include "core_log.h"
+#include "module_manager.h"
 
-#include <sol/sol.hpp>
+#include "render_system.h"
+#include "input_system.h"
+#include "audio_system.h"
+#include "resource_manager.h"
+#include "script_system.h"
+#include "script_binder.h"
+#include "animation_system.h"
+#include "card_system.h"
+#include "scene_manager.h"
+#include "ui_system.h"
+#include "debug_system.h"
 
-#include <nlohmann/json.hpp>
-
-#include <imgui.h>
-#include <imgui_impl_sdl2.h>
-#include <imgui_impl_sdlrenderer2.h>
-
-int main(int argc, char* argv[]) {
+int main(int argc, char* argv[])
+{
     (void)argc;
     (void)argv;
 
-    printf("=== MyFirstAiGameEngine - Dependency Verification ===\n");
+    LOG_INFO("Main", "========================================");
+    LOG_INFO("Main", "MyFirstAiGameEngine - 启动");
+    LOG_INFO("Main", "========================================");
 
-    /* SDL2 */
-    SDL_version sdlVer;
-    SDL_GetVersion(&sdlVer);
-    printf("[SDL2]    version %d.%d.%d\n", sdlVer.major, sdlVer.minor, sdlVer.patch);
+    LOG_INFO("Main", "2D 卡牌游戏引擎启动");
 
-    /* SDL_image */
-    const SDL_version* imgVer = IMG_Linked_Version();
-    printf("[SDL_img] version %d.%d.%d\n", imgVer->major, imgVer->minor, imgVer->patch);
+    EngineConfig config;
+    config.windowTitle = "MyFirstAiGameEngine";
+    config.windowWidth = 1280;
+    config.windowHeight = 720;
+    config.fullscreen = false;
+    config.vsync = true;
+    config.enableDebug = true;
+    config.logLevel = LogLevel::LOG_LEVEL_DEBUG;
 
-    /* SDL_ttf */
-    const SDL_version* ttfVer = TTF_Linked_Version();
-    printf("[SDL_ttf] version %d.%d.%d\n", ttfVer->major, ttfVer->minor, ttfVer->patch);
+    Engine& engine = Engine::EngineGet();
+    if (!engine.EngineInit(config)) {
+        LOG_ERROR("Main", "引擎初始化失败");
+        return 1;
+    }
 
-    /* SDL_mixer */
-    const SDL_version* mixVer = Mix_Linked_Version();
-    printf("[SDL_mix] version %d.%d.%d\n", mixVer->major, mixVer->minor, mixVer->patch);
+    ModuleManager& mm = engine.EngineGetModuleManager();
 
-    /* glm */
-    glm::vec2 v(1.0f, 2.0f);
-    printf("[glm]     vec2(%.1f, %.1f) length=%.3f\n", v.x, v.y, glm::length(v));
+    mm.ModuleRegister<ResourceManager>();
+    mm.ModuleRegister<RenderSystem>();
+    mm.ModuleRegister<InputSystem>();
+    mm.ModuleRegister<AudioSystem>();
+    mm.ModuleRegister<ScriptSystem>();
+    mm.ModuleRegister<AnimationSystem>();
+    mm.ModuleRegister<CardSystem>();
+    mm.ModuleRegister<SceneManager>();
+    mm.ModuleRegister<UISystem>();
+    mm.ModuleRegister<DebugSystem>();
 
-    /* nlohmann/json */
-    nlohmann::json j = { {"engine", "MyFirstAiGameEngine"}, {"version", "0.1.0"} };
-    printf("[json]    %s\n", j.dump().c_str());
+    if (!mm.ModuleInitAll()) {
+        LOG_ERROR("Main", "模块初始化失败，引擎关闭");
+        engine.EngineShutdown();
+        return 1;
+    }
 
-    /* Lua */
-    lua_State* L = luaL_newstate();
-    luaL_openlibs(L);
-    lua_pushstring(L, "Hello from Lua!");
-    lua_setglobal(L, "greeting");
-    luaL_dostring(L, "print(greeting)");
-    printf("[Lua]     state created, version: %s\n", LUA_VERSION);
-    lua_close(L);
+    mm.ModuleStartAll();
 
-    /* sol2 */
-    sol::state solState;
-    solState.open_libraries();
-    solState.script("print('[sol2]   C++17 binding working')");
+    InputSystem* input = engine.EngineGetModule<InputSystem>();
+    if (input != nullptr) {
+        input->InputSetupDefaultBindings();
+    }
 
-    /* Dear ImGui */
-    ImGui::CreateContext();
-    ImGuiIO& io = ImGui::GetIO();
-    printf("[ImGui]   version %s, %d fonts\n", IMGUI_VERSION, io.Fonts->Fonts.Size);
-    ImGui::DestroyContext();
+    ScriptSystem* script = engine.EngineGetModule<ScriptSystem>();
+    if (script != nullptr) {
+        ScriptRegisterEngineBindings(script);
+    }
 
-    printf("\n=== All dependencies verified successfully! ===\n");
+    CardSystem* card = engine.EngineGetModule<CardSystem>();
+    if (card != nullptr) {
+        LOG_INFO("Main", "卡牌系统就绪，已注册 %d 张模板", card->CardGetTemplateCount());
+    }
+
+    LOG_INFO("Main", "引擎启动完成，进入主循环");
+
+    engine.EngineRun();
+
+    LOG_INFO("Main", "引擎主循环结束，开始关闭");
+
+    engine.EngineShutdown();
+
+    LOG_INFO("Main", "引擎关闭完成");
+    LOG_INFO("Main", "========================================");
+    LOG_INFO("Main", "MyFirstAiGameEngine - 关闭");
+    LOG_INFO("Main", "========================================");
+
+    getchar();
     return 0;
 }
