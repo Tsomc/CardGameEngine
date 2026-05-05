@@ -1,0 +1,13 @@
+# 第三方依赖（通过 setup.ps1 下载）
+libs/
+
+# CMake 构建输出
+build/
+
+# 生成的 IntelliSense 文件
+compile_commands.json
+
+# IDE 临时文件
+*.user
+*.suo
+.vs/
