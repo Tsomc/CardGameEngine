@@ -16,5 +16,5 @@ compile_commands.json
 *.suo
 .vs/
 
-# 辅助脚本（非源码）
-tools/expand_cmds.py
+# 辅助脚本
+tools/
