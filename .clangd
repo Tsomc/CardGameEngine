@@ -4,3 +4,7 @@ CompileFlags:
     - "-D_M_AMD64"
   Remove:
     - "-mwindows"
+
+Diagnostics:
+  Suppress:
+    - "unused-includes"

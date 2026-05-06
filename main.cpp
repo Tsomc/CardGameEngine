@@ -2,7 +2,17 @@
 
 #include <SDL.h>
 
-#include "engine_all.h"
+#include "core.h"
+#include "resource.h"
+#include "input.h"
+#include "render.h"
+#include "audio.h"
+#include "script.h"
+#include "animation.h"
+#include "card.h"
+#include "scene.h"
+#include "ui.h"
+#include "debug.h"
 
 using namespace engine;
 
