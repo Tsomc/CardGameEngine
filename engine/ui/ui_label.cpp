@@ -1,5 +1,5 @@
 #include "ui_label.h"
-
+using namespace engine;
 void UILabel::UISetText(const std::string& t)
 {
     text = t;

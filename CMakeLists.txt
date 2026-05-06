@@ -183,6 +183,7 @@ add_executable(MyFirstAiGameEngine
 )
 
 target_include_directories(MyFirstAiGameEngine PRIVATE
+    ${ENGINE_DIR}
     ${ENGINE_DIR}/foundation
     ${ENGINE_DIR}/core
     ${ENGINE_DIR}/platform

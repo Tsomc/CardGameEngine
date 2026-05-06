@@ -4,6 +4,9 @@
 #include "i_platform.h"
 #include <string>
 
+
+namespace engine {
+
 struct SDL_Window;
 struct SDL_Renderer;
 
@@ -43,4 +46,6 @@ private:
     bool initialized;
 };
 
+
+} /* namespace engine */
 #endif

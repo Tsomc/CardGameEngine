@@ -8,6 +8,9 @@
 #include <memory>
 #include <sol/sol.hpp>
 
+
+namespace engine {
+
 class ScriptSystem : public IModule {
 public:
     ScriptSystem();
@@ -132,4 +135,6 @@ private:
     uint32_t maxInstructions;
 };
 
+
+} /* namespace engine */
 #endif

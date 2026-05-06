@@ -1,7 +1,7 @@
 #include "module_manager.h"
 #include "core_log.h"
 #include <queue>
-
+using namespace engine;
 ModuleManager::ModuleManager()
     : initialized(false)
 {

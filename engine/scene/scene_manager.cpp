@@ -2,7 +2,7 @@
 #include "core_log.h"
 #include "engine.h"
 #include "event_bus.h"
-
+using namespace engine;
 SceneManager::SceneManager()
 {
 }

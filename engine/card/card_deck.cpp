@@ -2,7 +2,7 @@
 #include "engine.h"
 #include <algorithm>
 #include <random>
-
+using namespace engine;
 void CardDeck::DeckShuffle()
 {
     std::mt19937_64& rng = Engine::EngineGet().EngineGetRNG();

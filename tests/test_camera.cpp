@@ -2,6 +2,8 @@
 #include "camera.h"
 #include "math_types.h"
 
+using namespace engine;
+
 TEST(CameraTest, DefaultState)
 {
     Camera cam;

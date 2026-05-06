@@ -1,6 +1,6 @@
 #include "script_system.h"
 #include "core_log.h"
-
+using namespace engine;
 #include <sol/sol.hpp>
 
 ScriptSystem::ScriptSystem()

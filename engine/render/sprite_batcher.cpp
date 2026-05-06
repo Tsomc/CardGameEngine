@@ -3,7 +3,7 @@
 #include <algorithm>
 #include <cmath>
 #include <SDL.h>
-
+using namespace engine;
 SpriteBatcher::SpriteBatcher()
     : drawCallCount(0)
     , spriteCount(0)

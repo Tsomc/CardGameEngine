@@ -9,6 +9,9 @@
 #include <typeinfo>
 #include <cstdint>
 
+
+namespace engine {
+
 using EventHandle = uint32_t;
 constexpr EventHandle INVALID_EVENT_HANDLE = 0;
 
@@ -90,4 +93,6 @@ private:
     EventHandle nextHandle;
 };
 
+
+} /* namespace engine */
 #endif

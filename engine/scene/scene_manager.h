@@ -6,6 +6,9 @@
 #include <memory>
 #include <stack>
 
+
+namespace engine {
+
 struct UISceneLoadedEvent : Event {
     std::string sceneName;
 };
@@ -54,4 +57,6 @@ private:
     std::stack<std::shared_ptr<IScene>> sceneStack;
 };
 
+
+} /* namespace engine */
 #endif

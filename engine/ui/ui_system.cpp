@@ -2,7 +2,7 @@
 #include "core_log.h"
 #include "event_bus.h"
 #include <algorithm>
-
+using namespace engine;
 UISystem::UISystem()
     : nextElementId(1)
     , focusedElementId(0)

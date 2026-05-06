@@ -3,6 +3,9 @@
 
 #include <cstdint>
 
+
+namespace engine {
+
 enum class EasingType : uint8_t {
     EASE_LINEAR         = 0,
     EASE_IN_QUAD        = 1,
@@ -35,4 +38,6 @@ float EaseOutElastic(float t);
 
 extern EasingFunction g_easingTable[12];
 
+
+} /* namespace engine */
 #endif

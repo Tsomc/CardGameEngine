@@ -7,6 +7,9 @@
 #include "sprite_batcher.h"
 #include "resource_handle.h"
 
+
+namespace engine {
+
 struct SDL_Renderer;
 
 class RenderSystem : public IModule {
@@ -60,4 +63,6 @@ private:
     bool initialized;
 };
 
+
+} /* namespace engine */
 #endif

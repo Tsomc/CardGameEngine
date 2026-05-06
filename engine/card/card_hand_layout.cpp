@@ -1,7 +1,7 @@
 #include "card_hand_layout.h"
 #include <algorithm>
 #include <cmath>
-
+using namespace engine;
 std::vector<CardHandPose> CardHandLayout::CardHandRecalculate(
     const std::vector<Card*>& cards,
     const Vec2& arcCenter,

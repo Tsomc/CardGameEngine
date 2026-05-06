@@ -7,6 +7,9 @@
 #include <functional>
 #include <deque>
 
+
+namespace engine {
+
 class DebugSystem : public IModule {
 public:
     DebugSystem();
@@ -58,4 +61,6 @@ private:
     PerfStats perfData;
 };
 
+
+} /* namespace engine */
 #endif

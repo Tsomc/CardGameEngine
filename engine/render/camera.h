@@ -3,6 +3,9 @@
 
 #include "math_types.h"
 
+
+namespace engine {
+
 struct Camera {
     Vec2 position;
     float zoom;
@@ -30,4 +33,6 @@ namespace CameraOps {
         const Camera& cam, int screenWidth, int screenHeight);
 }
 
+
+} /* namespace engine */
 #endif

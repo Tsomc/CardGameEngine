@@ -1,5 +1,5 @@
 #include "card_battlefield.h"
-
+using namespace engine;
 bool CardBattlefield::BattlefieldIsFull() const
 {
     return battlefieldMaxSlots > 0 && (int)cards.size() >= battlefieldMaxSlots;

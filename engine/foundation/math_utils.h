@@ -3,6 +3,9 @@
 
 #include "math_types.h"
 
+
+namespace engine {
+
 Vec2 Vec2Add(const Vec2& a, const Vec2& b);
 Vec2 Vec2Sub(const Vec2& a, const Vec2& b);
 Vec2 Vec2Scale(const Vec2& v, float s);
@@ -14,4 +17,6 @@ bool RectContainsPoint(const Rect& r, const Vec2& p);
 bool RectOverlaps(const Rect& a, const Rect& b);
 Vec2 RectCenter(const Rect& r);
 
+
+} /* namespace engine */
 #endif

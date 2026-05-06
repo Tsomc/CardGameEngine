@@ -5,6 +5,9 @@
 #include "resource_handle.h"
 #include <string>
 
+
+namespace engine {
+
 class AudioSystem : public IModule {
 public:
     AudioSystem();
@@ -46,4 +49,6 @@ private:
     bool isMusicPaused;
 };
 
+
+} /* namespace engine */
 #endif

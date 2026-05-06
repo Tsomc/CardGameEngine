@@ -3,6 +3,9 @@
 
 #include <cstdint>
 
+
+namespace engine {
+
 enum class LogLevel : uint8_t {
     LOG_LEVEL_DEBUG = 0,
     LOG_LEVEL_INFO  = 1,
@@ -24,4 +27,6 @@ void LogWrite(LogLevel level, const char* module, const char* fmt, ...);
 #define LOG_ERROR(mod, ...) \
     LogWrite(LogLevel::LOG_LEVEL_ERROR, mod, __VA_ARGS__)
 
+
+} /* namespace engine */
 #endif

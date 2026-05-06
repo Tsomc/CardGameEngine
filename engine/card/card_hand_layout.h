@@ -5,6 +5,9 @@
 #include "card.h"
 #include <vector>
 
+
+namespace engine {
+
 struct CardHandPose {
     Vec2 position;
     float rotation;
@@ -30,4 +33,6 @@ public:
         float maxSpacing = 80.0f);
 };
 
+
+} /* namespace engine */
 #endif

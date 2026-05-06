@@ -3,6 +3,9 @@
 
 #include <cstdint>
 
+
+namespace engine {
+
 struct Vec2 {
     float x;
     float y;
@@ -40,4 +43,6 @@ struct Color {
     static const Color COLOR_TRANSPARENT;
 };
 
+
+} /* namespace engine */
 #endif

@@ -3,7 +3,7 @@
 #include "engine.h"
 #include "i_platform.h"
 #include <SDL.h>
-
+using namespace engine;
 RenderSystem::RenderSystem()
     : sdlRenderer(nullptr)
     , screenWidth(1280)

@@ -3,6 +3,9 @@
 
 #include "card_zone.h"
 
+
+namespace engine {
+
 class CardDeck : public CardZone {
 public:
     void DeckShuffle();
@@ -11,4 +14,6 @@ public:
     void DeckInsertRandom(Card* card);
 };
 
+
+} /* namespace engine */
 #endif

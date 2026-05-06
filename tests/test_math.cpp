@@ -2,6 +2,8 @@
 #include "math_types.h"
 #include "math_utils.h"
 
+using namespace engine;
+
 TEST(MathTest, Vec2Add)
 {
     Vec2 a(1.0f, 2.0f);

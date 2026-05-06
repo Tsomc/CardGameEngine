@@ -6,6 +6,9 @@
 #include <vector>
 #include <cstdint>
 
+
+namespace engine {
+
 struct BatchedVertex {
     float x, y;
     float u, v;
@@ -39,4 +42,6 @@ private:
     int spriteCount;
 };
 
+
+} /* namespace engine */
 #endif

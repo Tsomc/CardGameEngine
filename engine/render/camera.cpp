@@ -1,7 +1,7 @@
 #include "camera.h"
 #include "math_utils.h"
 #include <algorithm>
-
+using namespace engine;
 Vec2 Camera::CameraScreenToWorld(
     const Vec2& screenPos, int screenWidth, int screenHeight) const
 {

@@ -1,7 +1,7 @@
 #include "game_clock.h"
 #include <algorithm>
 #include <SDL.h>
-
+using namespace engine;
 GameClock::GameClock()
     : frequency(0)
     , lastCounter(0)

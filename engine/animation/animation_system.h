@@ -12,6 +12,9 @@
 
 #include "card.h"
 
+
+namespace engine {
+
 struct TweenInstance {
     uint32_t id;
     CardInstanceId cardTarget;
@@ -114,4 +117,6 @@ private:
     float shakeFrequency;
 };
 
+
+} /* namespace engine */
 #endif

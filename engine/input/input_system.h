@@ -9,6 +9,9 @@
 #include <unordered_map>
 #include <string>
 
+
+namespace engine {
+
 struct InputActionEvent : Event {
     InputAction action;
     InputActionState state;
@@ -89,4 +92,6 @@ private:
     bool enabled;
 };
 
+
+} /* namespace engine */
 #endif

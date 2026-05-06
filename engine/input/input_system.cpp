@@ -3,7 +3,7 @@
 #include "engine.h"
 #include "render_system.h"
 #include <SDL.h>
-
+using namespace engine;
 InputSystem::InputSystem()
     : mousePosition(0.0f, 0.0f)
     , enabled(true)

@@ -4,7 +4,7 @@
 #include "resource_manager.h"
 #include <SDL.h>
 #include <SDL_mixer.h>
-
+using namespace engine;
 AudioSystem::AudioSystem()
     : masterVolume(1.0f)
     , effectVolume(1.0f)

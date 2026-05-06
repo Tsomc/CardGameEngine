@@ -107,6 +107,7 @@ set(TEST_SOURCES
 add_executable(EngineTests ${TEST_SOURCES})
 
 target_include_directories(EngineTests PRIVATE
+    ${ENGINE_DIR}
     ${ENGINE_DIR}/foundation
     ${ENGINE_DIR}/core
     ${ENGINE_DIR}/platform

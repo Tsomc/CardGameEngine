@@ -1,7 +1,7 @@
 #include "ui_image.h"
 #include "engine.h"
 #include "render_system.h"
-
+using namespace engine;
 void UIImage::UISetTexture(ResourceId texId)
 {
     textureId = texId;

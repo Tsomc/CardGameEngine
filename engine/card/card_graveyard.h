@@ -3,6 +3,9 @@
 
 #include "card_zone.h"
 
+
+namespace engine {
+
 class CardGraveyard : public CardZone {
 public:
     Card* GraveyardGetLast() const
@@ -14,4 +17,6 @@ public:
     }
 };
 
+
+} /* namespace engine */
 #endif

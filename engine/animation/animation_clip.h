@@ -6,6 +6,9 @@
 #include <functional>
 #include <cstdint>
 
+
+namespace engine {
+
 enum class AnimationProperty : uint8_t {
     ANIM_PROP_POSITION  = 0,
     ANIM_PROP_SCALE     = 1,
@@ -39,4 +42,6 @@ struct AnimationOverride {
     }
 };
 
+
+} /* namespace engine */
 #endif

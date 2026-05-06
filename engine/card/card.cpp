@@ -1,5 +1,5 @@
 #include "card.h"
-
+using namespace engine;
 Card::Card(CardInstanceId id, const CardData* data)
     : instanceId(id)
     , data(data)

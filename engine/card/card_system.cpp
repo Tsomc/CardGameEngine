@@ -7,7 +7,7 @@
 #include "engine.h"
 #include "resource_manager.h"
 #include "event_bus.h"
-
+using namespace engine;
 #include <nlohmann/json.hpp>
 
 CardSystem::CardSystem()

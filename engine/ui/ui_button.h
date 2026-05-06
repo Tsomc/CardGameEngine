@@ -6,6 +6,9 @@
 #include <string>
 #include <functional>
 
+
+namespace engine {
+
 class UIButton : public UIElement {
 public:
     UIButton();
@@ -40,4 +43,6 @@ private:
     ButtonState state;
 };
 
+
+} /* namespace engine */
 #endif

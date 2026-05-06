@@ -7,6 +7,9 @@
 #include <string>
 #include <unordered_map>
 
+
+namespace engine {
+
 class ResourceManager : public IModule {
 public:
     ResourceManager();
@@ -60,4 +63,6 @@ private:
     ResourceId nextId;
 };
 
+
+} /* namespace engine */
 #endif

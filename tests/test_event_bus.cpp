@@ -1,6 +1,8 @@
 #include <gtest/gtest.h>
 #include "event_bus.h"
 
+using namespace engine;
+
 struct TestEvent1 : Event {
     int value;
 };

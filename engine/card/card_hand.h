@@ -4,6 +4,9 @@
 #include "card_zone.h"
 #include <functional>
 
+
+namespace engine {
+
 class CardHand : public CardZone {
 public:
     int handMaxSize;
@@ -15,4 +18,6 @@ public:
     void HandSort(std::function<bool(Card*, Card*)> comparator);
 };
 
+
+} /* namespace engine */
 #endif

@@ -3,6 +3,9 @@
 
 #include "core_log.h"
 
+
+namespace engine {
+
 struct EngineConfig {
     const char* windowTitle;
     int windowWidth;
@@ -30,4 +33,6 @@ struct EngineConfig {
     }
 };
 
+
+} /* namespace engine */
 #endif

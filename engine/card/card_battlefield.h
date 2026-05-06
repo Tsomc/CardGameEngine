@@ -3,6 +3,9 @@
 
 #include "card_zone.h"
 
+
+namespace engine {
+
 class CardBattlefield : public CardZone {
 public:
     int battlefieldMaxSlots;
@@ -15,4 +18,6 @@ public:
     int BattlefieldGetPosition(CardInstanceId cardId) const;
 };
 
+
+} /* namespace engine */
 #endif

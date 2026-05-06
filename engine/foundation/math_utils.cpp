@@ -1,6 +1,6 @@
 #include "math_utils.h"
 #include <cmath>
-
+using namespace engine;
 Vec2 Vec2Add(const Vec2& a, const Vec2& b)
 {
     return Vec2(a.x + b.x, a.y + b.y);

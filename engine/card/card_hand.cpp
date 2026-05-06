@@ -1,6 +1,6 @@
 #include "card_hand.h"
 #include <algorithm>
-
+using namespace engine;
 bool CardHand::HandAdd(Card* card)
 {
     if (card == nullptr) {

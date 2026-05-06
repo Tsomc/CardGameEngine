@@ -3,7 +3,12 @@
 
 #include <cstdint>
 
+
+namespace engine {
+
 using ResourceId = uint32_t;
 constexpr ResourceId INVALID_RESOURCE_ID = 0;
 
+
+} /* namespace engine */
 #endif

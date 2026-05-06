@@ -4,7 +4,7 @@
 #include "engine.h"
 #include "i_platform.h"
 #include "platform_rwops.h"
-
+using namespace engine;
 #include <SDL.h>
 #include <SDL_image.h>
 #include <SDL_ttf.h>

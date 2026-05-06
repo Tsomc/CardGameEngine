@@ -4,6 +4,9 @@
 #include "resource_handle.h"
 #include <string>
 
+
+namespace engine {
+
 enum class ResourceType : uint8_t {
     RESOURCE_TYPE_TEXTURE = 0,
     RESOURCE_TYPE_SFX     = 1,
@@ -29,4 +32,6 @@ struct ResourceEntry {
     }
 };
 
+
+} /* namespace engine */
 #endif

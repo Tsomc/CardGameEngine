@@ -1,6 +1,6 @@
 #include "ui_element.h"
 #include "math_utils.h"
-
+using namespace engine;
 UIElement::UIElement()
     : id(0)
     , visible(true)

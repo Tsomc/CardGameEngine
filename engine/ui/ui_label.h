@@ -5,6 +5,9 @@
 #include "resource_handle.h"
 #include <string>
 
+
+namespace engine {
+
 class UILabel : public UIElement {
 public:
     void UISetText(const std::string& text);
@@ -20,4 +23,6 @@ private:
     Color color;
 };
 
+
+} /* namespace engine */
 #endif

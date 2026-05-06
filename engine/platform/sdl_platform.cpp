@@ -1,6 +1,6 @@
 #include "sdl_platform.h"
 #include "core_log.h"
-
+using namespace engine;
 #include <SDL.h>
 #include <SDL_image.h>
 #include <SDL_ttf.h>

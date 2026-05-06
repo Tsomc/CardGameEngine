@@ -4,7 +4,7 @@
 #include "render_system.h"
 #include "card_system.h"
 #include "resource_manager.h"
-
+using namespace engine;
 #include <imgui.h>
 #include <imgui_impl_sdl2.h>
 #include <imgui_impl_sdlrenderer2.h>

@@ -3,7 +3,7 @@
 #include "render_system.h"
 #include "sprite.h"
 #include <SDL.h>
-
+using namespace engine;
 UIButton::UIButton()
     : fontSize(16)
     , normalTex(INVALID_RESOURCE_ID)

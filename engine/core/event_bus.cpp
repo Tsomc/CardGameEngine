@@ -1,6 +1,6 @@
 #include "event_bus.h"
 #include <algorithm>
-
+using namespace engine;
 EventBus::EventBus()
     : nextHandle(1)
 {

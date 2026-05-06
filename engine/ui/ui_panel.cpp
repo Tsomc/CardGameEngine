@@ -1,6 +1,6 @@
 #include "ui_panel.h"
 #include <algorithm>
-
+using namespace engine;
 void UIPanel::UIPanelAddChild(UIElement* child)
 {
     if (child == nullptr) {

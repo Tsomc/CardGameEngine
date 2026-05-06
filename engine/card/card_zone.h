@@ -4,6 +4,9 @@
 #include "card.h"
 #include <vector>
 
+
+namespace engine {
+
 class CardZone {
 public:
     virtual ~CardZone() = default;
@@ -21,4 +24,6 @@ protected:
     std::vector<Card*> cards;
 };
 
+
+} /* namespace engine */
 #endif

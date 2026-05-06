@@ -11,6 +11,9 @@
 #include <cstdint>
 #include <random>
 
+
+namespace engine {
+
 class Engine {
 public:
     static Engine& EngineGet();
@@ -60,4 +63,6 @@ private:
     uint64_t randomSeed;
 };
 
+
+} /* namespace engine */
 #endif

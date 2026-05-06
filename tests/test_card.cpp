@@ -8,6 +8,8 @@
 #include "card_hand_layout.h"
 #include <nlohmann/json.hpp>
 
+using namespace engine;
+
 class CardTest : public ::testing::Test {
 protected:
     CardData tmpl;

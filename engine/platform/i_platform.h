@@ -1,6 +1,9 @@
 #ifndef I_PLATFORM_H
 #define I_PLATFORM_H
 
+
+namespace engine {
+
 class IPlatform {
 public:
     virtual ~IPlatform() = default;
@@ -29,4 +32,6 @@ public:
     virtual void* PlatformOpenFile(const char* path) = 0;
 };
 
+
+} /* namespace engine */
 #endif

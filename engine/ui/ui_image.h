@@ -5,6 +5,9 @@
 #include "resource_handle.h"
 #include "sprite.h"
 
+
+namespace engine {
+
 class UIImage : public UIElement {
 public:
     void UISetTexture(ResourceId texId);
@@ -18,4 +21,6 @@ private:
     FlipMode flipMode;
 };
 
+
+} /* namespace engine */
 #endif

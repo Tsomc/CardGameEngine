@@ -7,6 +7,9 @@
 #include <string>
 #include <cstdint>
 
+
+namespace engine {
+
 struct UIButtonClickedEvent : Event {
     uint32_t buttonId;
     std::string buttonName;
@@ -75,4 +78,6 @@ public:
     friend class UISystem;
 };
 
+
+} /* namespace engine */
 #endif

@@ -1,6 +1,8 @@
 #include <gtest/gtest.h>
 #include "module_manager.h"
 
+using namespace engine;
+
 class TestModuleA : public IModule {
 public:
     bool initCalled = false;

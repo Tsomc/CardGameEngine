@@ -4,6 +4,9 @@
 #include <string>
 #include <nlohmann/json.hpp>
 
+
+namespace engine {
+
 using CardTemplateId = uint32_t;
 
 struct CardData {
@@ -35,4 +38,6 @@ struct CardData {
     }
 };
 
+
+} /* namespace engine */
 #endif

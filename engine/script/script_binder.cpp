@@ -3,7 +3,7 @@
 #include "core_log.h"
 #include "engine.h"
 #include <random>
-
+using namespace engine;
 void ScriptRegisterEngineBindings(ScriptSystem* script)
 {
     if (script == nullptr) {

@@ -2,22 +2,9 @@
 
 #include <SDL.h>
 
-#include "engine.h"
-#include "engine_config.h"
-#include "core_log.h"
-#include "module_manager.h"
+#include "engine_all.h"
 
-#include "render_system.h"
-#include "input_system.h"
-#include "audio_system.h"
-#include "resource_manager.h"
-#include "script_system.h"
-#include "script_binder.h"
-#include "animation_system.h"
-#include "card_system.h"
-#include "scene_manager.h"
-#include "ui_system.h"
-#include "debug_system.h"
+using namespace engine;
 
 int main(int argc, char* argv[])
 {

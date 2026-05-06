@@ -3,7 +3,7 @@
 #include <ctime>
 #include <stdarg.h>
 #include <windows.h>
-
+using namespace engine;
 static LogLevel g_logLevel = LogLevel::LOG_LEVEL_DEBUG;
 
 void LogSetLevel(LogLevel level)

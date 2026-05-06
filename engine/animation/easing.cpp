@@ -1,6 +1,6 @@
 #include "easing.h"
 #include <cmath>
-
+using namespace engine;
 EasingFunction g_easingTable[12] = {
     EaseLinear,
     EaseInQuad, EaseOutQuad, EaseInOutQuad,

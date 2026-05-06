@@ -3,6 +3,9 @@
 
 #include <cstdint>
 
+
+namespace engine {
+
 class GameClock {
 public:
     GameClock();
@@ -28,4 +31,6 @@ private:
     bool initialized;
 };
 
+
+} /* namespace engine */
 #endif

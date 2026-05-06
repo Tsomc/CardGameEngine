@@ -1,5 +1,5 @@
 #include "math_types.h"
-
+using namespace engine;
 const Color Color::COLOR_WHITE       = Color(255, 255, 255, 255);
 const Color Color::COLOR_BLACK       = Color(0,   0,   0,   255);
 const Color Color::COLOR_RED         = Color(255, 0,   0,   255);

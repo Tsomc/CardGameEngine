@@ -8,6 +8,9 @@
 #include <memory>
 #include <functional>
 
+
+namespace engine {
+
 class UISystem : public IModule {
 public:
     UISystem();
@@ -64,4 +67,6 @@ private:
     uint32_t focusedElementId;
 };
 
+
+} /* namespace engine */
 #endif

@@ -2,7 +2,7 @@
 #include "core_log.h"
 #include "math_utils.h"
 #include <algorithm>
-
+using namespace engine;
 AnimationSystem::AnimationSystem()
     : nextId(1)
     , shakeIntensity(0.0f)

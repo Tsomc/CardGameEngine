@@ -11,6 +11,9 @@
 #include <vector>
 #include <functional>
 
+
+namespace engine {
+
 struct CardPlayedEvent : Event {
     CardInstanceId cardId;
     uint8_t playerId;
@@ -125,4 +128,6 @@ private:
     CardTemplateId nextTemplateId;
 };
 
+
+} /* namespace engine */
 #endif

@@ -3,6 +3,9 @@
 
 #include <SDL.h>
 
+
+namespace engine {
+
 class RwopsGuard {
 public:
     explicit RwopsGuard(SDL_RWops* rw) : rw(rw) {}
@@ -41,4 +44,6 @@ private:
     SDL_RWops* rw;
 };
 
+
+} /* namespace engine */
 #endif

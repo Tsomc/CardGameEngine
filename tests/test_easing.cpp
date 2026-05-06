@@ -1,6 +1,8 @@
 #include <gtest/gtest.h>
 #include "easing.h"
 
+using namespace engine;
+
 TEST(EasingTest, Linear)
 {
     EXPECT_FLOAT_EQ(g_easingTable[0](0.0f), 0.0f);

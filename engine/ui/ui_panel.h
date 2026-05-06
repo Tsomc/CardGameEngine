@@ -5,6 +5,9 @@
 #include <vector>
 #include <memory>
 
+
+namespace engine {
+
 class UIPanel : public UIElement {
 public:
     void UIPanelAddChild(UIElement* child);
@@ -19,4 +22,6 @@ private:
     std::vector<std::unique_ptr<UIElement>> children;
 };
 
+
+} /* namespace engine */
 #endif

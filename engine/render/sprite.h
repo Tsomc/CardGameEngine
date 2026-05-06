@@ -5,6 +5,9 @@
 #include "resource_handle.h"
 #include <cstdint>
 
+
+namespace engine {
+
 enum class FlipMode : uint8_t {
     FLIP_NONE        = 0,
     FLIP_HORIZONTAL  = 1,
@@ -32,4 +35,6 @@ struct Sprite {
     }
 };
 
+
+} /* namespace engine */
 #endif

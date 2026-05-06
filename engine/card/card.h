@@ -7,6 +7,9 @@
 #include <cstdint>
 #include <nlohmann/json.hpp>
 
+
+namespace engine {
+
 using CardInstanceId = uint32_t;
 constexpr CardInstanceId INVALID_CARD_INSTANCE_ID = 0;
 
@@ -70,4 +73,6 @@ private:
     std::unordered_map<std::string, int> counters;
 };
 
+
+} /* namespace engine */
 #endif

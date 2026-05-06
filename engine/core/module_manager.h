@@ -4,6 +4,9 @@
 #include <memory>
 #include <vector>
 
+
+namespace engine {
+
 class IModule {
 public:
     virtual ~IModule() = default;
@@ -80,4 +83,6 @@ private:
     bool initialized;
 };
 
+
+} /* namespace engine */
 #endif

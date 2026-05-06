@@ -4,6 +4,9 @@
 #include "event_bus.h"
 #include <cstdint>
 
+
+namespace engine {
+
 using PlayerId = uint8_t;
 constexpr PlayerId INVALID_PLAYER_ID = 0xFF;
 
@@ -33,4 +36,6 @@ private:
     bool paused;
 };
 
+
+} /* namespace engine */
 #endif

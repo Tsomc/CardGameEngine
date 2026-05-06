@@ -3,6 +3,9 @@
 
 #include <cstdint>
 
+
+namespace engine {
+
 enum InputAction : uint16_t {
     ACTION_NONE           = 0,
     ACTION_SELECT         = 1,
@@ -23,4 +26,6 @@ enum class InputActionState : uint8_t {
     INPUT_STATE_RELEASED = 2
 };
 
+
+} /* namespace engine */
 #endif

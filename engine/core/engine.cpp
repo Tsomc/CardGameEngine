@@ -4,7 +4,7 @@
 #include <SDL.h>
 #include <nlohmann/json.hpp>
 #include <fstream>
-
+using namespace engine;
 Engine::Engine()
     : quit(false)
     , initialized(false)

@@ -5,6 +5,9 @@
 #include <string>
 #include <vector>
 
+
+namespace engine {
+
 class IScene {
 public:
     virtual ~IScene() = default;
@@ -21,4 +24,6 @@ public:
     std::vector<EventHandle> eventHandles;
 };
 
+
+} /* namespace engine */
 #endif
